@@ -20,7 +20,7 @@ def word_checker(in_word, words):
     regex = in_word.replace(' ', '\\w')
     word_list = []
     for word in words:
-        if re.match(r'{0}'.format(regex), word) and len(in_word) is len(word):
+        if len(in_word) == len(word) and re.match(r'{0}'.format(regex), word):
             print(word)
             word_list.append(word)
     if not word_list:
